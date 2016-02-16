@@ -13,9 +13,9 @@ public class MyView extends View {
 
     public MyView(Context context) {
         super(context);
-        int x = 50;
-        int y = 50;
-        int sideLength = 200;
+        int x = 150;
+        int y = 150;
+        int sideLength = 700;
 
         // create a rectangle that we'll draw later
         rectangle = new Rect(x, y, sideLength, sideLength);
