@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">DrowFigureView</string>
+
+    <string name="swipe_left">Swipe left</string>
+    <string name="swipe_right">Swipe right</string>
     <string name="dummy_text">Test</string>
+
 </resources>

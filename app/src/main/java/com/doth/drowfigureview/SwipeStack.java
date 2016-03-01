@@ -28,6 +28,7 @@ public class SwipeStack extends ViewGroup {
 
     }
 
+
     // ============================================
     // ViewGroup
     @Override
@@ -35,6 +36,16 @@ public class SwipeStack extends ViewGroup {
 
     }
 
+
+    /**
+     * Register a callback to be invoked when the user has swiped the top view
+     * left / right or when the stack gets empty.
+     *
+     * @param listener The callback that will run
+     */
+    public void setListener(@Nullable SwipeStackListener listener) {
+        mListener = listener;
+    }
 
     public interface SwipeStackListener {
         void onViewSwipedToLeft(int position);
