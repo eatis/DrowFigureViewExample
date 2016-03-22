@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import android.content.Intent;
 import android.net.Uri;
-//import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.FloatingActionButton;
 //import android.support.design.widget.Snackbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,6 +29,7 @@ import com.doth.drowfigureview.SwipeStack;
 public class MainActivity extends AppCompatActivity implements SwipeStack.SwipeStackListener, View.OnClickListener {
 
     private Button mButtonLeft, mButtonRight;
+    private FloatingActionButton mFab;
 
     private SwipeStack mSwipeStack;
     private ArrayList<String> mData;
@@ -41,11 +42,14 @@ public class MainActivity extends AppCompatActivity implements SwipeStack.SwipeS
         mSwipeStack = (SwipeStack)findViewById(R.id.swipeStack);
         mButtonLeft = (Button)findViewById(R.id.buttonSwipeLeft);
         mButtonRight = (Button)findViewById(R.id.buttonSwipeRight);
+        mFab = (FloatingActionButton)findViewById(R.id.fabAdd);
 
         mButtonLeft.setOnClickListener(this);
         mButtonRight.setOnClickListener(this);
+        mFab.setOnClickListener(this);
 
         mData = new ArrayList<>();
+        mSwipeStack.setListener(this);
         mSwipeStack.setListener(this);
 
         //setContentView(new MyView(this));
